@@ -29,6 +29,7 @@ public class SkillCourt {
     String loginName;
     String loginPass;
     
+    //Added by Gajen
     final Object[] loginOptions = {
             "Login",
             "Create Account",
