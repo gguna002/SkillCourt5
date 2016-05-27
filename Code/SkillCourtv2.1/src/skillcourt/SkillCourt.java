@@ -68,7 +68,8 @@ public class SkillCourt {
         SequenceName = filename;
     }
     
-    public void loginMenu() throws Exception {
+    public void loginMenu() throws Exception 
+    {
         String message = "Welcome to SkillCourt Please login or create an account";
         
         int selection = JOptionPane.showOptionDialog(null,
