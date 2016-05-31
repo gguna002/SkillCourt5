@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package SkillCourtUI;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import skillcourt.SkillCourt;
+
+/**
+ *
+ * @author Sean
+ */
+public class LoginFXController implements Initializable
+{   
+    @FXML
+    private Label titleLabel;    
+    @FXML
+    private TextField usernameText;
+    @FXML
+    private PasswordField passwordText;
+    @FXML 
+    private Button loginBtn;
+    @FXML
+    private Button createAccountBtn;
+    
+    @FXML
+    private void loginBtnAction(ActionEvent event) throws Exception {
+
+    }
+    
+    @FXML
+    private void createBtnAction(ActionEvent event) {
+        
+    }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb)
+    {
+        // TODO
+    }
+
+    
+}
