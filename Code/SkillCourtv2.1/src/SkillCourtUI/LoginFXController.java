@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,11 +35,15 @@ public class LoginFXController implements Initializable
     private Button loginBtn;
     @FXML
     private Button createAccountBtn;
+    @FXML
+    private Hyperlink forgotPassword;
     
     @FXML
     private void loginBtnAction(ActionEvent event) throws Exception {
-        if(sc.login(usernameText.getText(), passwordText.getText()) == true)
+        if(sc.login(usernameText.getText(), passwordText.getText()) == true) {
             System.out.println("Successfully logged in.");
+            sc.mainMenu();
+        }          
         else
             System.out.println("Login failed.");            
             
@@ -47,6 +52,11 @@ public class LoginFXController implements Initializable
     @FXML
     private void createBtnAction(ActionEvent event) {
         
+    }
+    
+    @FXML
+    private void forgotPasswordAction(ActionEvent event) throws Exception {
+        sc.recoverPassword();
     }
     
     @Override
