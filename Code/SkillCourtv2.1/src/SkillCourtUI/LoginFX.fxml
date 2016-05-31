@@ -35,5 +35,6 @@
             <Reflection />
          </effect>
       </Button>
+      <Hyperlink fx:id="forgotPassword" layoutX="241.0" layoutY="354.0" onAction="#forgotPasswordAction" text="Forgot Password" />
     </children>
 </AnchorPane>
