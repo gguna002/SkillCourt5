@@ -67,29 +67,6 @@ public class SkillCourt {
         sequenceLoaded = true;
         SequenceName = filename;
     }
-    
-    public void loginMenu() throws Exception 
-    {
-        /*String message = "Welcome to SkillCourt Please login or create an account";
-        
-        int selection = JOptionPane.showOptionDialog(null,
-                message,
-                "SkillCourt SH v1",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.DEFAULT_OPTION,
-                null,
-                loginOptions,
-                loginOptions[0]);
-        
-        if(selection == 0)
-            login(); 
-        else if(selection == 1)
-            createAccount(); 
-        else if(selection == 2)
-            recoverPassword(); 
-        else if(selection == 3)
-            System.exit(0);*/
-    }
 
     public void mainMenu() throws Exception {
 
@@ -163,7 +140,6 @@ public class SkillCourt {
             String SQL = "INSERT INTO USERNAME.USERS (USERNAME, PASSWORD)\nVALUES (" + "'" + newName + "'" + "," + "'" + newPass + "'" + ")";
             stmt.executeUpdate(SQL);
             JOptionPane.showMessageDialog(null, "Account succefully added using query:\n" + SQL);
-            loginMenu();
        } 
        catch (SQLException ex) {
             Logger.getLogger(SkillCourt.class.getName()).log(Level.SEVERE, null, ex);
@@ -183,8 +159,6 @@ public class SkillCourt {
             ResultSet rs = stmt.executeQuery(SQL);
             rs.next();
             JOptionPane.showMessageDialog(null, "Your password is: " + rs.getString("PASSWORD"));
-            
-            loginMenu();
        } 
        catch (SQLException ex) {
             Logger.getLogger(SkillCourt.class.getName()).log(Level.SEVERE, null, ex);
@@ -382,7 +356,6 @@ public class SkillCourt {
     public static void main(String[] args) throws Exception {
 
         SkillCourt run = new SkillCourt();
-        run.loginMenu();
 
     }
 }
