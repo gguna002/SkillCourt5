@@ -21,7 +21,9 @@ import skillcourt.SkillCourt;
  * @author Sean
  */
 public class LoginFXController implements Initializable
-{   
+{
+    SkillCourt sc = new SkillCourt();
+    
     @FXML
     private Label titleLabel;    
     @FXML
@@ -35,7 +37,11 @@ public class LoginFXController implements Initializable
     
     @FXML
     private void loginBtnAction(ActionEvent event) throws Exception {
-
+        if(sc.login(usernameText.getText(), passwordText.getText()) == true)
+            System.out.println("Successfully logged in.");
+        else
+            System.out.println("Login failed.");            
+            
     }
     
     @FXML
