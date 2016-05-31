@@ -70,7 +70,7 @@ public class SkillCourt {
     
     public void loginMenu() throws Exception 
     {
-        String message = "Welcome to SkillCourt Please login or create an account";
+        /*String message = "Welcome to SkillCourt Please login or create an account";
         
         int selection = JOptionPane.showOptionDialog(null,
                 message,
@@ -88,7 +88,7 @@ public class SkillCourt {
         else if(selection == 2)
             recoverPassword(); 
         else if(selection == 3)
-            System.exit(0);
+            System.exit(0);*/
     }
 
     public void mainMenu() throws Exception {
@@ -122,11 +122,11 @@ public class SkillCourt {
         }
     }
     
-    public void login () throws Exception {    
-        try {
-            loginName = JOptionPane.showInputDialog("Username: ");
-            loginPass = JOptionPane.showInputDialog("Password: ");  
-            Boolean loginSuccess = false;
+    public Boolean login (String loginName, String loginPass) throws Exception {    
+        Boolean loginSuccess = false;
+        this.loginName = loginName;
+        this.loginPass = loginPass;
+        try {         
             String host = "jdbc:derby://localhost:1527/SkillCourtUser";
             String userName = "Username";
             String password = "password";
@@ -141,19 +141,14 @@ public class SkillCourt {
                 {
                     JOptionPane.showMessageDialog(null, "Succefully Logged in!");
                     loginSuccess = true;
-                    mainMenu();
-                    break;
+                    break;                  
                 }            
-            }
-            if(!loginSuccess)
-            {
-                JOptionPane.showMessageDialog(null, "Login failed.");
-                loginMenu();
-            }
+            }          
         } 
         catch (SQLException ex) {
             Logger.getLogger(SkillCourt.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return loginSuccess;
     }
     
     public void createAccount() throws Exception {
