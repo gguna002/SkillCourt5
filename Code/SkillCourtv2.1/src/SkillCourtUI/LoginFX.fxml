@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="642.0" prefWidth="449.0" style="-fx-background-color: #fff2e6;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SkillCourtUI.LoginFXController">
+    <children>
+        <Button fx:id="loginBtn" layoutX="28.0" layoutY="412.0" onAction="#loginBtnAction" prefHeight="51.0" prefWidth="171.0" text="Login" textAlignment="CENTER">
+         <effect>
+            <Reflection />
+         </effect></Button>
+      <PasswordField fx:id="passwordText" alignment="CENTER" layoutX="112.0" layoutY="288.0" prefHeight="66.0" prefWidth="226.0" promptText="Password">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </PasswordField>
+      <TextField fx:id="usernameText" alignment="CENTER" layoutX="113.0" layoutY="185.0" prefHeight="66.0" prefWidth="226.0" promptText="Username">
+         <effect>
+            <InnerShadow />
+         </effect></TextField>
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="37.0" layoutY="55.0" prefHeight="112.0" prefWidth="379.0" text="SkillCourt">
+         <font>
+            <Font name="System Bold" size="78.0" />
+         </font>
+      </Label>
+      <Button fx:id="createAccountBtn" layoutX="245.0" layoutY="412.0" onAction="#createBtnAction" prefHeight="51.0" prefWidth="171.0" text="Create Account" textAlignment="CENTER">
+         <effect>
+            <Reflection />
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>
