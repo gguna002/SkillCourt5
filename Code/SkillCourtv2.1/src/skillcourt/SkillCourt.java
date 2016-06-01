@@ -128,16 +128,17 @@ public class SkillCourt {
         return loginSuccess;
     }
     
-    public void createAccount() throws Exception {
+    public void createAccount(String username, String password, String fName, String lName, String eMail, 
+                                                    String position, String DoB, String pFoot, String team) throws Exception {
        try {         
             String host = "jdbc:derby://localhost:1527/SkillCourtUser";
             String userName = "Username";
-            String password = "password";
-            String newName = JOptionPane.showInputDialog("Enter desired username: ");
-            String newPass = JOptionPane.showInputDialog("Enter desired password: ");
-            Connection con = DriverManager.getConnection(host, userName, password);
+            String passWord = "password";
+            Connection con = DriverManager.getConnection(host, userName, passWord);
             Statement stmt = con.createStatement();
-            String SQL = "INSERT INTO USERNAME.USERS (USERNAME, PASSWORD)\nVALUES (" + "'" + newName + "'" + "," + "'" + newPass + "'" + ")";
+            String SQL = "INSERT INTO USERNAME.USERS (USERNAME, PASSWORD)\nVALUES (" + "'" + username + "'" + "," + "'" + password + "'" + "," +
+                   "'" + fName + "'" + "," + "'" + lName + "'" + "," + "'" + eMail + "'" + "," + "'" + position + "'" + "," +
+                   "'" + DoB + "'" + "," + "'" + pFoot + "'" + "," + "'" + team + "'" + ")";
             stmt.executeUpdate(SQL);
             JOptionPane.showMessageDialog(null, "Account succefully added using query:\n" + SQL);
        } 
