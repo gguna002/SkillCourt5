@@ -136,7 +136,8 @@ public class SkillCourt {
             String passWord = "password";
             Connection con = DriverManager.getConnection(host, userName, passWord);
             Statement stmt = con.createStatement();
-            String SQL = "INSERT INTO USERNAME.USERS (USERNAME, PASSWORD)\nVALUES (" + "'" + username + "'" + "," + "'" + password + "'" + "," +
+            String SQL = "INSERT INTO USERNAME.USERS (USERNAME, PASSWORD, FIRSTNAME, LASTNAME, EMAIL, POSITION, DOB, PREFERREDFOOT, TEAM)\nVALUES (" 
+                   + "'" + username + "'" + "," + "'" + password + "'" + "," +
                    "'" + fName + "'" + "," + "'" + lName + "'" + "," + "'" + eMail + "'" + "," + "'" + position + "'" + "," +
                    "'" + DoB + "'" + "," + "'" + pFoot + "'" + "," + "'" + team + "'" + ")";
             stmt.executeUpdate(SQL);
