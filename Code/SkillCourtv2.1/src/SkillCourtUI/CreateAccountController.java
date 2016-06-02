@@ -8,6 +8,7 @@ package SkillCourtUI;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,6 +25,8 @@ import skillcourt.SkillCourt;
  */
 public class CreateAccountController implements Initializable
 {
+    ObservableList<String> positionBoxList = FXCollections.observableArrayList("ST", "CF", "LW", "RW", "LW", "CAM", "LM", "RM", "CM", "CDM", "LWB", "RWB", "LB", "RB", "CB", "GK");
+    ObservableList<String> footBoxList = FXCollections.observableArrayList("Right", "Left");
     SkillCourt sc = new SkillCourt();
     
     @FXML
@@ -39,19 +42,19 @@ public class CreateAccountController implements Initializable
     @FXML
     private TextField emailText;
     @FXML
-    private TextField position;
+    private ChoiceBox position;
     @FXML
     private TextField DoBText;
     @FXML
-    private TextField preferredFootText;
+    private ChoiceBox preferredFootText;
     @FXML
     private TextField teamText;
     
     @FXML
     private void submitBtnAction(ActionEvent event) throws Exception{
         sc.createAccount(usernameText.getText(), passwordText.getText(), firstNameText.getText(), 
-                lastNameText.getText(), emailText.getText(), position.getText(), DoBText.getText(), 
-                preferredFootText.getText(), teamText.getText());
+                lastNameText.getText(), emailText.getText(), (String)position.getValue(), DoBText.getText(), 
+                (String)preferredFootText.getValue(), teamText.getText());
     }
 
     /**
@@ -61,6 +64,10 @@ public class CreateAccountController implements Initializable
     public void initialize(URL url, ResourceBundle rb)
     {
         // TODO
+        position.setValue("ST");
+        position.setItems(positionBoxList);
+        preferredFootText.setValue("Right");
+        preferredFootText.setItems(footBoxList);
     }    
     
 }
