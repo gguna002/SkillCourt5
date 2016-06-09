@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -20,6 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import processing.core.PApplet;
 import skillcourt.SkillCourt;
 
 /**
@@ -31,7 +33,9 @@ public class LoginFXController implements Initializable
     SkillCourt sc = new SkillCourt();
     
     @FXML
-    private Label titleLabel;    
+    private Label titleLabel;
+    @FXML
+    private Label errorLabel;
     @FXML
     private TextField usernameText;
     @FXML
@@ -47,15 +51,15 @@ public class LoginFXController implements Initializable
     private void loginBtnAction(ActionEvent event) throws Exception {
         if(sc.login(usernameText.getText(), passwordText.getText()) == true) {
             System.out.println("Successfully logged in.");
-            sc.mainMenu();
+            PApplet.main( new String[]{"SkillCourtProcessing.SkillCourt3"} );
         }          
         else
-            System.out.println("Login failed.");            
+            System.out.println("Login failed");
             
     }
     
     @FXML
-    private void createBtnAction(ActionEvent event) throws IOException{
+    private void createBtnAction(ActionEvent event) throws IOException {
         Stage primaryStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/SkillCourtUI/CreateAccount.fxml"));
         Scene scene = new Scene(root);
