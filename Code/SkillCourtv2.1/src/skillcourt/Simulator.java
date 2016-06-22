@@ -1,5 +1,6 @@
 package skillcourt;
 
+import gnu.io.SerialPortEvent;
 import java.util.HashMap;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
@@ -49,7 +50,7 @@ public class Simulator {
             System.out.println("it worked");
             
         }
-
+        
         //Arduino end
         if (!fileLoad) {
             System.out.println("No file loaded!");
@@ -72,7 +73,7 @@ public class Simulator {
                         TileGrid temp = grids.get(j.getName());
                         //Command code
                         if (j.getName().equals("North") && j.getCol() == 0 && j.getRow() == 0) {
-                            test.sendData(j.getStandardColor());
+                            test.sendData(j.getStandardColor());                           
                             try {
                                 Thread.sleep(2000);
                             } catch (InterruptedException ie) {
@@ -84,7 +85,7 @@ public class Simulator {
                     }
 
                 }
-                JOptionPane.showMessageDialog(null, "Step Completed");
+                //JOptionPane.showMessageDialog(null, "Step Completed");
                 AuxFunction.printGrids(grids);
                 test.sendData("o");
                             try {

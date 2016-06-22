@@ -31,9 +31,7 @@ public class SkillCourtTester {
 		GridCommand testCommand4 = new GridCommand("South",1,2,255,255,0,1);
 		testStep2.addCommand(testCommand3);
 		testStep2.addCommand(testCommand4);
-		
-		
-		
+			
 		
 		//Sequence File requires(HashMap<String,String> info, LinkedList<GridInfo> grids, LinkedList<Step> steps)
 		HashMap<String, String> info = new HashMap<>();
@@ -55,12 +53,10 @@ public class SkillCourtTester {
 		grids2.put(test.getName(), test);
 		grids2.put(test2.getName(), test2);
 		
-		
-		
-		
+				
 		SequenceFile seqFil = new SequenceFile(info,grids,steps);
 		
-		//seqFil.exportFile("newSave.xml");
+		seqFil.exportFile("newSave.xml");
 		
 		Simulator sim = new Simulator(AuxFunction.XMLdecode("newSave.xml"));
 		sim.runSimulation();

@@ -354,10 +354,15 @@ public class SkillCourt {
         
         mainMenu();
     }
+    
+    public String getLoginName() {
+        return loginName;
+    }
 
     public static void main(String[] args) throws Exception {
 
         SkillCourt run = new SkillCourt();
+        run.mainMenu();
 
     }
 }
