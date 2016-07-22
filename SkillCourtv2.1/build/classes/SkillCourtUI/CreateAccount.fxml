@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="599.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SkillCourtUI.CreateAccountController">
+    <children>
+      <ImageView fitHeight="521.0" fitWidth="599.0" pickOnBounds="true">
+         <image>
+            <Image url="@Field1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="23.0" layoutY="149.0" text="First Name:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="190.0" text="Last Name:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="230.0" text="E-mail:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="firstNameText" layoutX="206.0" layoutY="144.0" />
+      <TextField fx:id="lastNameText" layoutX="206.0" layoutY="185.0" />
+      <TextField fx:id="emailText" layoutX="207.0" layoutY="225.0" />
+      <Label layoutX="23.0" layoutY="271.0" text="Position:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="312.0" text="DoB(YYYY-MM-DD):" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="353.0" text="Preferred Foot:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="394.0" text="Team:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="teamText" layoutX="206.0" layoutY="389.0" />
+      <Label layoutX="21.0" layoutY="75.0" text="Username:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TextField fx:id="usernameText" layoutX="206.0" layoutY="70.0" prefHeight="31.0" prefWidth="187.0" />
+      <TextField fx:id="DoBText" layoutX="206.0" layoutY="307.0" />
+      <Label layoutX="22.0" layoutY="111.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="138.0" layoutY="14.0" prefHeight="40.0" prefWidth="307.0" text="Account Creation Page" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font></Label>
+      <Button fx:id="submitBtn" layoutX="203.0" layoutY="449.0" mnemonicParsing="false" onAction="#submitBtnAction" prefHeight="52.0" prefWidth="194.0" text="Submit">
+         <font>
+            <Font size="19.0" />
+         </font></Button>
+      <PasswordField fx:id="passwordText" layoutX="207.0" layoutY="106.0" />
+      <ChoiceBox fx:id="position" layoutX="206.0" layoutY="266.0" prefHeight="31.0" prefWidth="187.0" />
+      <ChoiceBox fx:id="preferredFootText" layoutX="207.0" layoutY="348.0" prefHeight="31.0" prefWidth="187.0" />
+   </children>
+</AnchorPane>

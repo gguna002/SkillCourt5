@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="449.0" style="-fx-background-image: url(&quot;grass.jpg&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SkillCourtUI.LoginFXController">
+    <children>
+      <ImageView fitHeight="593.0" fitWidth="449.0" pickOnBounds="true">
+         <image>
+            <Image url="@grass_ball.jpg" />
+         </image>
+      </ImageView>
+        <Button fx:id="loginBtn" layoutX="245.0" layoutY="370.0" onAction="#loginBtnAction" opacity="0.82" prefHeight="51.0" prefWidth="194.0" text="Login" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <PasswordField fx:id="passwordText" alignment="CENTER" layoutX="123.0" layoutY="231.0" prefHeight="66.0" prefWidth="226.0" promptText="Password">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </PasswordField>
+      <TextField fx:id="usernameText" alignment="CENTER" layoutX="123.0" layoutY="139.0" prefHeight="66.0" prefWidth="226.0" promptText="Username">
+         <effect>
+            <InnerShadow />
+         </effect></TextField>
+      <Label fx:id="titleLabel" alignment="CENTER" layoutX="35.0" layoutY="14.0" prefHeight="112.0" prefWidth="379.0" text="SkillCourt" textFill="#fffefe">
+         <font>
+            <Font size="76.0" />
+         </font>
+      </Label>
+      <Button fx:id="createAccountBtn" layoutX="245.0" layoutY="442.0" onAction="#createBtnAction" opacity="0.82" prefHeight="51.0" prefWidth="194.0" text="Create Account" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Hyperlink fx:id="forgotPassword" layoutX="212.0" layoutY="297.0" onAction="#forgotPasswordAction" text="Forgot Password" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Hyperlink>
+    </children>
+</AnchorPane>
